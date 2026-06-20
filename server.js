@@ -13,6 +13,7 @@ const routes = new Map([
   ['/help', 'help.html'],
   ['/contact', 'contact.html'],
   ['/terms', 'terms.html'],
+  ['/favicon.ico', 'assets/mark.png'],
   ['/robots.txt', 'robots.txt'],
   ['/sitemap.xml', 'sitemap.xml']
 ]);
