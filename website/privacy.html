@@ -366,16 +366,21 @@ select{ appearance:none; background-image:linear-gradient(45deg, transparent 50%
           <ul>
             <li>Route and location information such as selected start points, destination points, waypoints, route distance, and route progress.</li>
             <li>Run information such as duration, distance, speed, completion state, achievements, goals, and history saved on your device.</li>
+            <li>Limited app interaction analytics, such as route catalog actions, route source, coverage warnings, and run start/completion events. StreetStride does not send precise route coordinates, place names, Apple Health data, or account identifiers in these analytics events.</li>
+            <li>Crash diagnostics used to understand app stability and fix bugs.</li>
             <li>App preferences such as unit settings, audio choices, theme preferences, and cache controls.</li>
             <li>Optional photos or share cards only when you choose to save or share them.</li>
+            <li>Optional local reminder settings when you choose to enable workout reminders.</li>
           </ul>
         </section>
 
         <section class="clause" id="third-parties">
           <span class="clause-num">03</span>
           <h2>Google and Apple services</h2>
-          <p>StreetStride uses Google Maps Platform services, including route and Street View functionality. When you create or preview routes, relevant location, route, device, network, and request information may be sent to Google and handled under Google's terms and privacy policy.</p>
-          <p>StreetStride may also use Apple services and frameworks such as App Store, StoreKit, HealthKit, Keychain, Photos, and system permission prompts. Apple's handling of information is governed by Apple's privacy practices and your device settings.</p>
+          <p>StreetStride uses Google Maps Platform services, including maps, directions, place search, and Street View functionality. When you create, search, or preview routes, relevant location, route, device, network, and request information may be sent to Google and handled under Google's terms and privacy policy.</p>
+          <p>StreetStride uses Firebase Analytics and Firebase Crashlytics to measure core route/run interactions and diagnose crashes. These services are configured without advertising tracking, and StreetStride does not set a user ID.</p>
+          <p>StreetStride may also use Apple services and frameworks such as App Store, StoreKit, HealthKit, Keychain, Photos, local notifications, audio, and system permission prompts. Apple's handling of information is governed by Apple's privacy practices and your device settings.</p>
+          <p>If you enable Health integration, StreetStride writes completed treadmill workouts, distance, duration, and estimated active energy to Apple Health. StreetStride does not read your existing Apple Health data.</p>
         </section>
 
         <section class="clause" id="permissions">
@@ -385,6 +390,7 @@ select{ appearance:none; background-image:linear-gradient(45deg, transparent 50%
             <li>You can manage Location permission in iOS Settings.</li>
             <li>You can manage Health permission in the Health app and iOS Settings.</li>
             <li>You can manage Photos permission in iOS Settings.</li>
+            <li>You can manage notification permission and reminder settings in StreetStride and iOS Settings.</li>
             <li>You can delete local app data by removing the app from your device.</li>
           </ul>
         </section>
