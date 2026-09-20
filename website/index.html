@@ -10,47 +10,137 @@
 <meta property="og:title" content="StreetStride — Run real streets from a still room">
 <meta property="og:description" content="Pick any street on Earth, set your treadmill pace, and move through real Street View.">
 <meta property="og:image" content="assets/app-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="landing">
 
-<div class="split">
+<header class="site-header">
+  <div class="page">
+    <a class="brand" href="/"><img src="assets/mark.png" alt="">StreetStride</a>
+    <nav class="site-nav">
+      <a href="/support">Support</a>
+      <a href="/help">Help</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <a class="btn btn--primary btn--sm" href="#get-the-app">Get the app</a>
+  </div>
+</header>
 
-  <div class="stage">
-    <img src="assets/running-view.webp" alt="StreetStride on iPhone: a New York street in Street View with distance, time, speed and remaining distance" width="1306" height="1929" fetchpriority="high">
-    <div class="get">
-      <a class="btn btn--primary" href="https://apps.apple.com/us/app/streetstride-treadmill-routes/id6770422886"><img src="https://cdn.simpleicons.org/appstore/f7f7f5" alt="">App Store</a>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=quyendang.StreetStride"><img src="https://cdn.simpleicons.org/googleplay/141414" alt="">Google Play</a>
+<main>
+
+  <section class="hero">
+    <div class="page hero-grid">
+
+      <figure class="mockup">
+        <span class="chip chip--light">
+          <span class="dot"></span>Live Street View
+        </span>
+        <img src="assets/running-view.webp" alt="StreetStride on iPhone: a New York street in Street View with distance, time, speed and remaining distance" width="1306" height="1929" fetchpriority="high">
+        <span class="chip chip--dark">
+          <span class="material-symbols-outlined">speed</span>8.0 km/h treadmill stride
+        </span>
+      </figure>
+
+      <div class="hero-copy">
+        <h1>Run real streets from a still room.</h1>
+        <p class="lede">Pick any street on Earth, set your treadmill pace, and move through real Street View, one stride at a time.</p>
+
+        <p class="pill-note">
+          <span class="material-symbols-outlined">lock</span>
+          Routes, runs and history stay on your device. No account needed.
+        </p>
+
+        <div class="get">
+          <a class="btn btn--primary btn--store" href="https://apps.apple.com/us/app/streetstride-treadmill-routes/id6770422886">
+            <img src="https://cdn.simpleicons.org/appstore/f7f7f5" alt="">
+            <span><small>Download on</small>App Store</span>
+          </a>
+          <a class="btn btn--store" href="https://play.google.com/store/apps/details?id=quyendang.StreetStride">
+            <img src="https://cdn.simpleicons.org/googleplay/141414" alt="">
+            <span><small>Get it on</small>Google Play</span>
+          </a>
+        </div>
+
+        <dl class="metrics">
+          <div><dt>100%</dt><dd>Runs stored on your device</dd></div>
+          <div><dt class="is-teal">0</dt><dd>Accounts to create</dd></div>
+          <div><dt class="is-orange">Global</dt><dd>Street View coverage</dd></div>
+        </dl>
+      </div>
+
     </div>
+  </section>
+
+  <section class="features">
+    <div class="page">
+      <div class="features-head">
+        <p class="eyebrow">Engineered for still rooms</p>
+        <h2>The world is your running track.</h2>
+        <p class="features-intro">Turn a standard treadmill session into a walk down a boulevard, a mountain pass, or a quiet coastal road.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card-icon card-icon--teal material-symbols-outlined">map</span>
+          <h3>Real Street View</h3>
+          <p>Google Street View imagery steps forward with your stride. Run Manhattan, Kyoto or Paris from the same spot in your room.</p>
+          <p class="card-foot">Panoramas load as you go</p>
+        </article>
+
+        <article class="card">
+          <span class="card-icon card-icon--orange material-symbols-outlined">tune</span>
+          <h3>Pace and distance sync</h3>
+          <p>Set the speed your treadmill is running at and adjust it mid-session. The HUD keeps distance, time and remaining distance in view.</p>
+          <p class="card-foot">Change pace without stopping</p>
+        </article>
+
+        <article class="card">
+          <span class="card-icon card-icon--ink material-symbols-outlined">lock</span>
+          <h3>No account needed</h3>
+          <p>Runs, saved routes and history live on your device. Open the app and start running, with no sign-up in the way.</p>
+          <p class="card-foot">Nothing to log into</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="get-the-app">
+    <div class="page">
+      <div class="cta-panel">
+        <div>
+          <p class="eyebrow">Ready for your next stride?</p>
+          <h2>Take your first step today.</h2>
+          <p>Available now for iPhone and Android.</p>
+        </div>
+        <div class="get">
+          <a class="btn btn--on-dark" href="https://apps.apple.com/us/app/streetstride-treadmill-routes/id6770422886">
+            <img src="https://cdn.simpleicons.org/appstore/141414" alt="">App Store
+          </a>
+          <a class="btn btn--on-dark btn--ghost" href="https://play.google.com/store/apps/details?id=quyendang.StreetStride">
+            <img src="https://cdn.simpleicons.org/googleplay/f7f7f5" alt="">Google Play
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="page">
+    <span><img src="assets/mark.png" alt=""> &copy; 2026 StreetStride. All rights reserved.</span>
+    <nav>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="mailto:support@streetstride.app">support@streetstride.app</a>
+    </nav>
   </div>
-
-  <div class="col">
-    <header class="site-header">
-      <a class="brand" href="/"><img src="assets/mark.png" alt="">StreetStride</a>
-      <nav class="site-nav">
-        <a href="/support">Support</a>
-        <a href="/help">Help</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
-      </nav>
-    </header>
-
-    <main class="hero">
-      <h1>Run real streets from a still room.</h1>
-      <p class="lede">Pick any street on Earth, set your treadmill pace, and move through real Street View, one stride at a time.</p>
-      <p class="note">Routes, runs and history stay on your device. No account needed.</p>
-    </main>
-
-    <footer class="site-footer">
-      <span>&copy; 2026 StreetStride</span>
-      <nav>
-        <a href="mailto:support@streetstride.app">support@streetstride.app</a>
-        <a href="/contact">Contact</a>
-      </nav>
-    </footer>
-  </div>
-
-</div>
+</footer>
 
 </body>
 </html>
