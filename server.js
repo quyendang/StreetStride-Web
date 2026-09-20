@@ -53,10 +53,13 @@ function sendFile(res, filePath, statusCode = 200) {
       return;
     }
 
+    // .html/.css/.js keep their filename across deploys, so they must revalidate.
+    // Images and fonts get a new filename when they change, so they can be immutable.
     const ext = path.extname(filePath);
+    const mutable = ext === '.html' || ext === '.css' || ext === '.js';
     res.writeHead(statusCode, {
       'content-type': mimeTypes.get(ext) || 'application/octet-stream',
-      'cache-control': ext === '.html' ? 'no-cache' : 'public, max-age=31536000, immutable',
+      'cache-control': mutable ? 'no-cache' : 'public, max-age=31536000, immutable',
       'x-content-type-options': 'nosniff'
     });
     res.end(body);
