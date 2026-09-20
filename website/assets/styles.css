@@ -58,7 +58,7 @@ h1,h2,h3{margin:0;letter-spacing:-.025em;font-weight:600;line-height:1.15}
 .btn{
   display:inline-flex;align-items:center;gap:10px;
   height:50px;padding:0 22px;border-radius:999px;
-  font-size:14px;font-weight:500;
+  font-size:14px;font-weight:500;white-space:nowrap;flex:0 0 auto;
   border:1px solid var(--line-strong);background:transparent;color:var(--ink);
   transition:border-color .15s ease,background .15s ease,transform .1s ease;
 }
@@ -72,18 +72,22 @@ h1,h2,h3{margin:0;letter-spacing:-.025em;font-weight:600;line-height:1.15}
 /* ---------- landing: split, no scroll ---------- */
 
 .landing{overflow:hidden}
-.landing .split{min-height:100dvh;display:grid;grid-template-columns:1fr 46%}
+.landing .split{height:100dvh;display:grid;grid-template-columns:46% 1fr}
+.landing .split > *{min-height:0}
 .landing .col{display:grid;grid-template-rows:auto 1fr auto;padding:28px 48px}
 .landing .hero{align-self:center;max-width:560px;padding:40px 0}
-.landing h1{margin:0 0 22px;font-size:clamp(36px,5vw,62px);line-height:1.03;letter-spacing:-.04em}
-.landing .lede{margin:0 0 34px;font-size:17px;color:var(--ink-2);max-width:44ch}
+.landing h1{margin:0 0 22px;font-size:clamp(36px,4.6vw,58px);line-height:1.03;letter-spacing:-.04em}
+.landing .lede{margin:0;font-size:17px;color:var(--ink-2);max-width:44ch}
 .landing .note{margin:26px 0 0;font-size:13px;color:var(--ink-2)}
-.stage{position:relative;overflow:hidden;background:#eceae4;border-left:1px solid var(--line)}
-.stage img{
-  position:absolute;inset:28px;
-  width:calc(100% - 56px);height:calc(100% - 56px);
-  object-fit:contain;object-position:center;
+
+/* left column: mockup above, store buttons below */
+.stage{
+  display:grid;grid-template-rows:minmax(0,1fr) auto;gap:28px;
+  padding:40px 40px 48px;
+  background:#eceae4;border-right:1px solid var(--line);
 }
+.stage > img{min-height:0;width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.stage .get{justify-content:center}
 
 /* ---------- inner pages ---------- */
 
@@ -144,15 +148,19 @@ h1,h2,h3{margin:0;letter-spacing:-.025em;font-weight:600;line-height:1.15}
 
 @media (max-width:880px){
   .landing{overflow:auto}
-  .landing .split{grid-template-columns:1fr;grid-template-rows:1fr auto}
+  .landing .split{height:auto;min-height:100dvh;grid-template-columns:1fr;grid-template-rows:auto 1fr}
   .landing .col{padding:16px 20px}
-  .landing .hero{padding:20px 0}
-  .landing h1{font-size:clamp(28px,8vw,38px);margin-bottom:14px}
-  .landing .lede{font-size:15px;margin-bottom:24px}
-  .landing .note{margin-top:18px;font-size:12px}
+  .landing .hero{padding:18px 0}
+  .landing h1{font-size:clamp(28px,7.5vw,36px);margin-bottom:14px}
+  .landing .lede{font-size:15px}
+  .landing .note{margin-top:16px;font-size:12px}
   .landing .btn{height:46px;padding:0 18px}
-  .stage{height:34vh;min-height:240px;border-left:0;border-top:1px solid var(--line)}
-  .stage img{inset:16px;width:calc(100% - 32px);height:calc(100% - 32px)}
+  .stage{
+    grid-row:1;height:auto;min-height:0;gap:18px;
+    padding:16px 20px 20px;
+    border-right:0;border-bottom:1px solid var(--line);
+  }
+  .stage > img{height:30vh;min-height:200px}
   .page{padding:0 20px}
   .page-main{padding:36px 0 56px}
   .site-header{height:auto;padding:16px 0;flex-wrap:wrap;gap:12px}
